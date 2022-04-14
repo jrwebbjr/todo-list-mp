@@ -1,6 +1,6 @@
 import toDoListData from '../../data'; 
 import './App.css';
-import Form from '../Form';
+import Form from '../../components/Form/Form';
 
 function App() {
   return (
