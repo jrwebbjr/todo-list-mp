@@ -1,10 +1,86 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(46, 46, 46);
+  margin: 250px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: black;
+}
+
+h2 {
+  display: flex;
+  font-size: large;
+}
+
+.App {
+  text-align: center;
+  font-family: bree, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(230, 230, 230);
+  height: auto;
+  width: 600px;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  font-family: bree, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 10px;
+  width: 90%;
+}
+
+  .input:hover {
+    border: 3px solid green;
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 190, 0);
+  background-color:#282c34;
+  border: none;
+  border-radius: 25%;
+  padding: .5em;
+}
+
+.remove-button {
+  display: flex;
+  align-items: center;
+  color: red;
+  background-color:#282c34;
+  border: none;
+  border-radius: 25%;
+  padding: .5em;
+}
+.p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 500px;
+  margin-bottom: 0px;
+  font-size: x-small;
+  color: black;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (prefers-reduced-motion: no-preference) {

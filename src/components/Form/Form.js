@@ -1,5 +1,6 @@
-
+import "../../pages/App/App.css";
 import { useState } from 'react';
+import { IoIosAddCircle } from 'react-icons/io';
 
 export default function Form(props){
     const [ task, setTask ] = useState({name: ''})
@@ -15,13 +16,14 @@ export default function Form(props){
     }
 
     return (
-        <form className="app" onSubmit={handleSubmit}>
-            <input type="text"
+        <form className="form" onSubmit={handleSubmit}>
+            <input className='input' type="text"
             name="name"
             onChange={handleChange}
+            required
             value={task.name}
             />
-            <input type="submit" value="Submit Task" />
+            <button className="Button" type="submit"><IoIosAddCircle /></button>
         </form>
     )
 }
