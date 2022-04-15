@@ -27,6 +27,7 @@ h2 {
   justify-content: center;
   color: rgb(0, 0, 0);
   background-color: rgb(230, 230, 230);
+  box-shadow: 10px 10px 30px 10px black;
   height: auto;
   width: 600px;
   padding: 20px;
