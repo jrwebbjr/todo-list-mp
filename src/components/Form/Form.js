@@ -23,7 +23,7 @@ export default function Form(props){
             required
             value={task.name}
             />
-            <button className="Button" type="submit"><IoIosAddCircle /></button>
+            <button className="new-button" type="submit"><IoIosAddCircle />New</button>
         </form>
     )
 }

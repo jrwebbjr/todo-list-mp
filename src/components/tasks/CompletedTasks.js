@@ -7,8 +7,8 @@ export default function CompletedTasks(props){
             {toDoListData.map((todo) => {
                 if(todo.completed === true){
                     return (
-                        <ul className="list">
-                            <li>{todo.title}<button className="remove-button"><IoIosCloseCircle /></button></li>
+                        <ul className="completed-list">
+                            <li className="list-item">{todo.title}<button className="remove-button"><IoIosCloseCircle /></button></li>
                         </ul>
                     )
                 }

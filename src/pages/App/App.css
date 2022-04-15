@@ -42,8 +42,8 @@ h2 {
   font-family: bree, sans-serif;
   font-style: normal;
   font-weight: 400;
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 5px;
+  width: 80%;
   margin-right: 10px;
 }
 
@@ -57,7 +57,17 @@ h2 {
   color: rgb(0, 190, 0);
   background-color:#282c34;
   border: none;
-  border-radius: 25%;
+  border-radius: 10%;
+  padding: .5em;
+  margin-left: 10px;
+}
+.new-button {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 190, 0);
+  background-color:#282c34;
+  border: 5px solid rgb(46, 46, 46);
+  border-radius: 10%;
   padding: .5em;
 }
 
@@ -67,8 +77,9 @@ h2 {
   color: red;
   background-color:#282c34;
   border: none;
-  border-radius: 25%;
+  border-radius: 10%;
   padding: .5em;
+  margin-left: 10px;
 }
 .p {
   display: flex;
@@ -82,7 +93,17 @@ h2 {
 
 .list {
   display: flex;
-  flex-direction: row;
+}
+
+.completed-list {
+  display: flex;
+  text-decoration-line:line-through;
+  text-decoration-style: wavy;
+  text-decoration-color: red ;
+}
+
+.list-item {
+  display: flex;
 }
 
 @media (prefers-reduced-motion: no-preference) {

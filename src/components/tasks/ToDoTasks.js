@@ -11,7 +11,7 @@ export default function ToDoTasks(props){
                 if(todo.completed !== true){
                     return (
                         <ul className="list">
-                            <li>{todo.title}<button className="Button"><IoIosAddCircle /></button></li>
+                            <li className="list-item">{todo.title}<button className="Button"><IoIosAddCircle />Done</button></li>
                         </ul>
                     )
                 }
