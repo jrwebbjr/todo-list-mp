@@ -18,6 +18,8 @@ router.get("/", (req, res) => {
     })
 })
 
+
+
 //Delete Route
 
 router.delete("/:id", (req, res) => {
@@ -32,7 +34,17 @@ router.delete("/:id", (req, res) => {
 
 //Update Route
 
+router.put("/:id", (req, res) => {
+    const { body } = req;
 
+    Todo.findByIdAndUpdate(req.params.id, body, {new: true}, (err, updatedTodo) => {
+        if(!err){
+            res.status(200).json(updatedTodo)
+        } else {
+            res.status(400).json(err)
+        }
+    })
+})
 
 //Create Route
 
@@ -48,3 +60,20 @@ router.post("/", (req, res) => {
     })
 })
 
+//Edit Route
+
+
+
+//Show Route
+
+router.get("/:id", (req, res) => {
+    Todo.findById(req.params.id, (err, foundTodo) => {
+        if(!err){
+            res.status(200).json({message: "All Good!", foundTodo})
+        } else {
+            res.status(400).json(err)
+        }
+    })
+})
+
+module.exports = router;
