@@ -10,7 +10,7 @@ export default function ToDoTasks(props){
             {toDoListData.map((todo) => {
                 if(todo.completed !== true){
                     return (
-                            <li className="list-item">{todo.title}<button onClick={handleClick} className="Button"><IoIosAddCircle />Done</button></li>
+                        <li className="list-item">{todo.title}<button className="Button"><IoIosAddCircle />Done</button></li>
                     )
                 }
             })}

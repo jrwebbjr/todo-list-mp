@@ -2,7 +2,7 @@ import toDoListData from "../../data";
 import { IoIosCloseCircle } from 'react-icons/io';
 
 export default function CompletedTasks(props){
-    const handleClick = todo.completed = true
+    
     return (
         <div>
             <ul className="completed-list">
