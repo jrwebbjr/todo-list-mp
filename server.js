@@ -11,8 +11,8 @@ const todoController = require("./controllers/Todo");
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use("todos", todoController);
+app.use("/todos", todoController);
 
 app.listen(PORT, () => {
-    `Drippin on Port: ${PORT}`
+    console.log(`Drippin on Port: ${PORT}`)
 })

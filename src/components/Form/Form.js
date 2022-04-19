@@ -1,19 +1,26 @@
 import "../../pages/App/App.css";
 import { useState } from 'react';
 import { IoIosAddCircle } from 'react-icons/io';
+const axios = require('axios');
 
 export default function Form(props){
-    const [ task, setTask ] = useState({name: ''})
+    const [ task, setTask ] = useState("")
 
     const handleChange = (evt) => {
         setTask({...task, [evt.target.name]: evt.target.value })
     }
 
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-
-        alert(JSON.stringify(task))
-    }
+    const handleSubmit = async () => {
+        try{
+          const response = await axios.post(`http://localhost:3001/`, {
+            title: task,
+            completed: false
+          })
+        } catch (err) {
+          console.log(err)
+        }
+      }
+    
 
     return (
         <form className="form" onSubmit={handleSubmit}>
@@ -23,7 +30,7 @@ export default function Form(props){
             required
             value={task.name}
             />
-            <button className="new-button" type="submit"><IoIosAddCircle />New</button>
+            <button className="new-button" type="submit"><IoIosAddCircle />Task</button>
         </form>
     )
 }

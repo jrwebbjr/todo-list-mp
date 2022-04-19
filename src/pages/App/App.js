@@ -1,11 +1,14 @@
-import toDoListData from '../../data'; 
+import { useState } from 'react';
 import './App.css';
 import Form from '../../components/form/Form';
-import Tasks from '../../components/tasks/CompletedTasks';
-import ToDoTasks from '../../components/tasks/ToDoTasks';
-import CompletedTasks from '../../components/tasks/CompletedTasks';
+import TodoListItem from '../../components/TodoListItem/TodoListItem';
+import TodoList from '../../components/TodoList/TodoList';
+import CompletedTodoList from '../../components/CompletedTodoList/CompletedTodoList';
+
+
 
 function App() {
+  const [task, setTask] = useState([]);
   return (
     <div className="App">
       <div className='container'>
@@ -13,9 +16,9 @@ function App() {
         <p className='p'>New Task</p>
         <Form />
         <h2 className='h2'>To Do Items:</h2>
-        <ToDoTasks />
+        <TodoList />
         <h2>Completed Tasks</h2>
-        <CompletedTasks />
+        <CompletedTodoList />
       </div>
     </div>
   );
